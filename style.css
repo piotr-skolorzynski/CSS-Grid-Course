@@ -1,3 +1,5 @@
+/* grid columns */
+
 /* basic style */
 body {
     color: #fff;
@@ -6,6 +8,12 @@ body {
 }
 
 #content {
+    display: grid;
+    /* grid-template-columns: 33.3% 33.3% 33.3%; */
+    /* grid-template-columns: 30% 20% 50%; */
+    /* grid-template-columns: 1fr 1fr 1fr; */
+    /* grid-template-columns: 1fr 2fr 1fr; */
+    grid-template-columns: repeat(9, 1fr);
     max-width: 960px;
     margin: 0 auto;
 }
