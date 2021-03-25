@@ -1,4 +1,4 @@
-/* grid areas */
+/* responsive grid exapmle */
 
 body {
     color: #fff;
@@ -6,19 +6,38 @@ body {
     text-align: center;
 }
 
-#content {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-auto-rows: minmax(100px, auto);
-    max-width: 960px;
-    grid-gap: 10px;
-    margin: 0 auto;
-    grid-template-areas:
-    "header header header header"
-    "aside . main main"
-    "nav . main main"
-    "section section section section"
-    "footer footer footer footer";
+    #content {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-auto-rows: minmax(100px, auto);
+        max-width: 960px;
+        grid-gap: 10px;
+        margin: 0 auto;
+        grid-template-areas:
+            "header header header header"
+            "footer footer footer footer"
+            "main main main main"
+            "main main main main"
+            "aside aside nav nav"
+            "section section section section"
+            "section section section section";
+    }
+
+@media screen and (min-width:768px) {
+    #content {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-auto-rows: minmax(100px, auto);
+        max-width: 960px;
+        grid-gap: 10px;
+        margin: 0 auto;
+        grid-template-areas:
+        "header header header header"
+        "aside aside main main"
+        "nav nav main main"
+        "section section section section"
+        "footer footer footer footer";
+    }
 }
 
 #content>* {
